@@ -1,11 +1,15 @@
 
 
 """
-While having a constant nucleotide sequence DNA molecules in a cell can be chemically modified in a number of different ways.
-For example, the DNA bases can be methylated, or histone proteins, around which DNA is wrapped, can be supplied with chemical
-tags such as acetylation. It is thought that such modifications (or marks) define cell specialization or a cell state when a
-certain combination of marks regulate how genes are expressed.
+In this problem your task is to arrange bacterial communities in the order of the "evolutionary age".
 
-In this problem, you are given genomic tracks describing a presence or an absence of several epigenomic marks. Your task is
-to split the genomic positions into a number of states so that each state corresponds to a particular combination of marks.
+To simulate the evolution process we generate bacterial communities one by one. Each bacterial community
+represents a generation that was constructed from the previous generation using the rules described below.
+Bacteria in each generation are represented as strings consisting of 20 nucleotides that can vary from one
+generation to another.
+
+Input in this problem is a sequence of generations 𝑆=𝑔0,𝑔1,…,𝑔|𝑆|−1. Elements of 𝑆 is a subset of all generations
+created by an evolutionary process. Generations in 𝑆 are arranged in some random unknown order. Each 𝑔𝑖 is described
+in the input by a set of strings representing some bacteria randomly taken from the generation 𝑔𝑖. As a result you
+should provide an order in which bacterial communities from 𝑆 were generated.
 """
