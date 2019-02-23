@@ -20,4 +20,9 @@ of times the respective segment/adjacency is present in the cancer genome in que
 edge cannot coincide (i.e., be parallel) with the adjacency edge.
 
 
+You need to decompose edges of the graph into the set of paths and cycles, not necessarily simple, so that segment and adjacency edges in each path
+or cycle alternate, and each path begins and ends with the segment edge. Each such path/cycle corresponds to a derived cancer genome chromosome,
+and a decomposition determines the sequentialized chromosomal structure of the cancer genome in question. For each edge, the number of its occurrences
+in paths and cycles should be equal to its multiplicity.
+
 """
