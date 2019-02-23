@@ -6,4 +6,11 @@ simplicity, we can assume that the only changes that happen to the genome during
 and we will omit the facts that tumors can be heterogeneous, and that the genomes in questions are not haploid. With this simplified
 model in mind, we can try to solve the problem of reconstructing the sequential structure of derived chromosomes in cancer genomes.
 
+
+We can not measure actual chromosomes directly, but given that mutated chromosomes in cancer genomes are derived from a known reference,
+we are guaranteed that every derived chromosome basically determines a novel path/cycle of segments of the reference chromosomes.
+There exist several methods that can provide the information of how often a given segment of the healthy reference is present in the observed
+cancer genome, as well as what are the possible adjacencies between segments extremities as they appear along the derived chromosomes in question.
+
+
 """
