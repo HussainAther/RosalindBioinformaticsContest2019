@@ -12,5 +12,12 @@ we are guaranteed that every derived chromosome basically determines a novel pat
 There exist several methods that can provide the information of how often a given segment of the healthy reference is present in the observed
 cancer genome, as well as what are the possible adjacencies between segments extremities as they appear along the derived chromosomes in question.
 
+More formally, if we assume that a reference genome is comprised of 𝑚 segments that were rearranged throughout the somatic evolutionary process,
+the derived cancer genome can be represented as a graph on 𝑛=2⋅𝑚 vertices (i.e., segments extremities), with 𝑚 undirected segment edges that do
+not share common vertices (i.e., determine a perfect matching on the vertices), and 𝑘 undirected adjacency edges, that correspond to transitions
+between segments extremities in the observed derived genome. Every edge also has a non-negative integer multiplicity, corresponding to the number
+of times the respective segment/adjacency is present in the cancer genome in question. In this problem, we only consider graphs where a segment
+edge cannot coincide (i.e., be parallel) with the adjacency edge.
+
 
 """
