@@ -1,3 +1,4 @@
+import networkx as nx
 
 """
 Cancer progression can be viewed as an accumulation of somatic mutations over the life of the cell, starting with a single cell with a
@@ -25,4 +26,27 @@ or cycle alternate, and each path begins and ends with the segment edge. Each su
 and a decomposition determines the sequentialized chromosomal structure of the cancer genome in question. For each edge, the number of its occurrences
 in paths and cycles should be equal to its multiplicity.
 
+Easy version: You should output any decomposition.
+
+Hard version: You should minimize the number of paths and cycles in your decomposition.
+
+The test for both versions is the same. You can download it here: https://stepik.org/media/attachments/lesson/207045/tests.zip.
 """
+
+# Adjacency matrix
+
+count = 0
+graph = {}
+with open("input.txt","r") as file:
+    for line in file:
+        if count > 0:
+            graph[(line.split(" ")[0])] = line.split(" ")[1] + " " + line.split(" ")[2]
+        count += 1
+
+new_graph = nx.Graph()
+for source, targets in graph.iteritems():
+    for inner_dict in targets:
+        assert len(inner_dict) == 1
+        new_graph.add_edge(int(source) - 1, int(inner_dict.keys()[0]) - 1,
+                           weight=inner_dict.values()[0])
+adjacency_matrix = nx.adjacency_matrix(new_graph)
