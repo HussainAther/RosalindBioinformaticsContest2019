@@ -1,3 +1,5 @@
+
+
 """
 You are given a list of proteins. Each protein is represented as a sequence of amino acids. You have to
 find as short DNA sequence as possible from which all the proteins can be translated.
