@@ -13,3 +13,23 @@ created by an evolutionary process. Generations in 𝑆 are arranged in some ran
 in the input by a set of strings representing some bacteria randomly taken from the generation 𝑔𝑖. As a result you
 should provide an order in which bacterial communities from 𝑆 were generated.
 """
+results = []
+subresults = []
+
+with open("input.txt", "r") as file
+    for line in file:
+        line = line.replace("\n", ""))
+        if len(line) > 1 and subresults != []:
+            results.append(subresults)
+            subresults = []
+            first = line.split(" ")[0]
+            second = line.split(" ")[1]
+            count = 0
+            for i in range(len(first):
+                if first[i] != second[i]
+                count += 1
+            subresults.append(count)
+
+for subresult in results:
+    for i in subresult:
+        print(i),
