@@ -101,11 +101,17 @@ with open("input.txt", "r") as file:
 proteins = reverse(sorted(proteins, key=len))
 
 dna = ""
+reversedna = dna[::-1]
 
 results = {}
 
 for protein in proteins:
-    
+    aastring = ""
+    for base in protein:
+        aastring += aabank[base]
+    if aastring.replace("$","") not in dna and aastring.replace("$", "") not in reversedna:
+        
+
 
 print(dna)
 for result in results:
