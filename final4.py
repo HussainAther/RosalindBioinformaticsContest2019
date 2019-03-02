@@ -89,4 +89,6 @@ aabank = {
     "GGG":"G"
 }
 
-
+with open("input.txt", "r") as file:
+    for line in file:
+        
