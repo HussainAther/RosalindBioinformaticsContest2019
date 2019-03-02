@@ -98,9 +98,15 @@ with open("input.txt", "r") as file:
             proteins.append(line.replace("\n", ""))
         count += 1
 
-proteins = sorted(proteins, key=len)
+proteins = reverse(sorted(proteins, key=len))
 
 dna = ""
 
+results = {}
+
 for protein in proteins:
     
+
+print(dna)
+for result in results:
+    print(str(results) + " " + str(results[result]))
