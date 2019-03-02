@@ -30,5 +30,12 @@ with open("input.txt", "r") as file:
             lists.append(sublist)
         count += 1
 
-for i in range(len(lists)):
-    
+results = []
+
+for i in lists:
+    record = []
+    for j in i:
+        record.append(lists[i][j])
+
+for i in results:
+    print(i),
