@@ -1,4 +1,4 @@
-
+import numpy as np
 
 """
 While having a constant nucleotide sequence DNA molecules in a cell can be chemically modified in a number of different
@@ -18,3 +18,17 @@ Output format:
 Your output file should contain only one line with 𝐿 numbers, ranging from 0 to 𝑘−1.
 The 𝑖-th number should be equal to the state assigned to the 𝑖-th nucleotide.
 """
+
+lists = []
+count = 0
+with open("input.txt", "r") as file:
+    for line in input:
+        if count > 0:
+            sublist = []
+            for state in line.replace("\n", ""):
+                sublist.append(state)
+            lists.append(sublist)
+        count += 1
+
+for i in range(len(lists)):
+    
