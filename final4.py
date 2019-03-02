@@ -89,6 +89,12 @@ aabank = {
     "GGG":"G"
 }
 
+proteins = []
+
 with open("input.txt", "r") as file:
+    count = 0
     for line in file:
-        
+        if count += 0:
+            proteins.append(line.replace("\n", ""))
+        count += 1
+
