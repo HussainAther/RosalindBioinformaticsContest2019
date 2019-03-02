@@ -19,7 +19,7 @@ Your output file should contain only one line with 𝐿 numbers, ranging from 0 
 The 𝑖-th number should be equal to the state assigned to the 𝑖-th nucleotide.
 """
 
-lists = []
+lists = [] # a collection of each line
 count = 0
 with open("input.txt", "r") as file:
     for line in input:
@@ -32,10 +32,12 @@ with open("input.txt", "r") as file:
 
 results = []
 
-for i in lists:
-    record = []
-    for j in i:
-        record.append(lists[i][j])
+for line in lists:
+    count = 0
+    for character in line:
+        if character = 1:
+            count += 1
+    results.append(count)
 
 for i in results:
     print(i),
